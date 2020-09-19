@@ -14,6 +14,8 @@
 		8F80D50E25163F5800474FA4 /* IniNotesV2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D50C25163F5800474FA4 /* IniNotesV2.xcdatamodeld */; };
 		8F80D51025163F5900474FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F80D50F25163F5900474FA4 /* Assets.xcassets */; };
 		8F80D51325163F5900474FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F80D51125163F5900474FA4 /* LaunchScreen.storyboard */; };
+		8F80D51C251642E000474FA4 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */; };
+		8F80D51D251642E000474FA4 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8F80D50F25163F5900474FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F80D51225163F5900474FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F80D51425163F5900474FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		8F80D50225163F5800474FA4 /* IniNotesV2 */ = {
 			isa = PBXGroup;
 			children = (
+				8F80D51E251642E500474FA4 /* Model Data */,
 				8F80D50325163F5800474FA4 /* AppDelegate.swift */,
 				8F80D50525163F5800474FA4 /* SceneDelegate.swift */,
 				8F80D50725163F5800474FA4 /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				8F80D50C25163F5800474FA4 /* IniNotesV2.xcdatamodeld */,
 			);
 			path = IniNotesV2;
+			sourceTree = "<group>";
+		};
+		8F80D51E251642E500474FA4 /* Model Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */,
+				8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */,
+			);
+			path = "Model Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +158,8 @@
 				8F80D50E25163F5800474FA4 /* IniNotesV2.xcdatamodeld in Sources */,
 				8F80D50825163F5800474FA4 /* ViewController.swift in Sources */,
 				8F80D50425163F5800474FA4 /* AppDelegate.swift in Sources */,
+				8F80D51D251642E000474FA4 /* Notes+CoreDataProperties.swift in Sources */,
+				8F80D51C251642E000474FA4 /* Notes+CoreDataClass.swift in Sources */,
 				8F80D50625163F5800474FA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
