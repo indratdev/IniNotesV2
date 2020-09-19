@@ -16,6 +16,8 @@
 		8F80D51325163F5900474FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F80D51125163F5900474FA4 /* LaunchScreen.storyboard */; };
 		8F80D51C251642E000474FA4 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */; };
 		8F80D51D251642E000474FA4 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */; };
+		8F80D523251643E400474FA4 /* NoteTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D521251643E400474FA4 /* NoteTBCell.swift */; };
+		8F80D524251643E400474FA4 /* NoteTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F80D522251643E400474FA4 /* NoteTBCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8F80D51425163F5900474FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8F80D521251643E400474FA4 /* NoteTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTBCell.swift; sourceTree = "<group>"; };
+		8F80D522251643E400474FA4 /* NoteTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTBCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +69,11 @@
 				8F80D51E251642E500474FA4 /* Model Data */,
 				8F80D50325163F5800474FA4 /* AppDelegate.swift */,
 				8F80D50525163F5800474FA4 /* SceneDelegate.swift */,
-				8F80D50725163F5800474FA4 /* ViewController.swift */,
-				8F80D50925163F5800474FA4 /* Main.storyboard */,
+				8F80D51F251643A800474FA4 /* Controller */,
+				8F80D520251643BB00474FA4 /* View */,
 				8F80D50F25163F5900474FA4 /* Assets.xcassets */,
 				8F80D51125163F5900474FA4 /* LaunchScreen.storyboard */,
 				8F80D51425163F5900474FA4 /* Info.plist */,
-				8F80D50C25163F5800474FA4 /* IniNotesV2.xcdatamodeld */,
 			);
 			path = IniNotesV2;
 			sourceTree = "<group>";
@@ -80,8 +83,27 @@
 			children = (
 				8F80D51A251642E000474FA4 /* Notes+CoreDataClass.swift */,
 				8F80D51B251642E000474FA4 /* Notes+CoreDataProperties.swift */,
+				8F80D50C25163F5800474FA4 /* IniNotesV2.xcdatamodeld */,
 			);
 			path = "Model Data";
+			sourceTree = "<group>";
+		};
+		8F80D51F251643A800474FA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F80D50725163F5800474FA4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F80D520251643BB00474FA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F80D50925163F5800474FA4 /* Main.storyboard */,
+				8F80D521251643E400474FA4 /* NoteTBCell.swift */,
+				8F80D522251643E400474FA4 /* NoteTBCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +167,7 @@
 				8F80D51325163F5900474FA4 /* LaunchScreen.storyboard in Resources */,
 				8F80D51025163F5900474FA4 /* Assets.xcassets in Resources */,
 				8F80D50B25163F5800474FA4 /* Main.storyboard in Resources */,
+				8F80D524251643E400474FA4 /* NoteTBCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +184,7 @@
 				8F80D51D251642E000474FA4 /* Notes+CoreDataProperties.swift in Sources */,
 				8F80D51C251642E000474FA4 /* Notes+CoreDataClass.swift in Sources */,
 				8F80D50625163F5800474FA4 /* SceneDelegate.swift in Sources */,
+				8F80D523251643E400474FA4 /* NoteTBCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
