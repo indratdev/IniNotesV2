@@ -22,8 +22,6 @@ struct OperationNote {
             print(err)
             return nil
         }
-        
-        
     }
     
     

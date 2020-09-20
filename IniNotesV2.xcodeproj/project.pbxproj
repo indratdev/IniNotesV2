@@ -21,6 +21,7 @@
 		8F80D526251646A300474FA4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D525251646A300474FA4 /* Utilities.swift */; };
 		8F80D52925164BB300474FA4 /* OperationNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D52825164BB300474FA4 /* OperationNote.swift */; };
 		8F80D52B251654C500474FA4 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80D52A251654C500474FA4 /* NotesVC.swift */; };
+		8F84F03025171E52002301DB /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F84F02F25171E51002301DB /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8F80D525251646A300474FA4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8F80D52825164BB300474FA4 /* OperationNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationNote.swift; sourceTree = "<group>"; };
 		8F80D52A251654C500474FA4 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		8F84F02F25171E51002301DB /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8F80D525251646A300474FA4 /* Utilities.swift */,
+				8F84F02F25171E51002301DB /* Validation.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				8F80D50E25163F5800474FA4 /* IniNotesV2.xcdatamodeld in Sources */,
 				8F80D50825163F5800474FA4 /* ViewController.swift in Sources */,
+				8F84F03025171E52002301DB /* Validation.swift in Sources */,
 				8F80D52925164BB300474FA4 /* OperationNote.swift in Sources */,
 				8F80D50425163F5800474FA4 /* AppDelegate.swift in Sources */,
 				8F80D51D251642E000474FA4 /* Notes+CoreDataProperties.swift in Sources */,
