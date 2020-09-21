@@ -134,14 +134,24 @@
                                     </textView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-6Y-b7H">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-6Y-b7H">
                                 <rect key="frame" x="100" y="539" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sEw-b1-taA"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="SAVE"/>
                                 <connections>
                                     <action selector="buttonProssed:" destination="Oia-in-uug" eventType="touchUpInside" id="Rs6-2X-qLi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-iN-dNB" userLabel="Update Button">
+                                <rect key="frame" x="100" y="539" width="214" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2xb-ra-fQy"/>
+                                </constraints>
+                                <state key="normal" title="UPDATE"/>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="Oia-in-uug" eventType="touchUpInside" id="gcG-gm-vBu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,9 +162,12 @@
                             <constraint firstItem="V3c-ma-sc9" firstAttribute="trailing" secondItem="aEj-Zx-29s" secondAttribute="trailing" constant="10" id="2ny-Gd-fyi"/>
                             <constraint firstItem="V3c-ma-sc9" firstAttribute="trailing" secondItem="x7D-6Y-b7H" secondAttribute="trailing" constant="100" id="3Vg-rp-h4M"/>
                             <constraint firstItem="8IF-de-RM4" firstAttribute="leading" secondItem="V3c-ma-sc9" secondAttribute="leading" constant="10" id="7Ev-zc-vLN"/>
+                            <constraint firstItem="V3c-ma-sc9" firstAttribute="trailing" secondItem="r0r-iN-dNB" secondAttribute="trailing" constant="100" id="9xV-Cp-sig"/>
+                            <constraint firstItem="r0r-iN-dNB" firstAttribute="leading" secondItem="V3c-ma-sc9" secondAttribute="leading" constant="100" id="OhD-uu-e8R"/>
                             <constraint firstItem="G48-Q9-i4G" firstAttribute="top" secondItem="xxa-2h-7Xj" secondAttribute="top" id="SLw-0M-eZB"/>
                             <constraint firstItem="x7D-6Y-b7H" firstAttribute="top" secondItem="8IF-de-RM4" secondAttribute="bottom" constant="20" id="bbC-4w-6lb"/>
                             <constraint firstAttribute="bottom" secondItem="G48-Q9-i4G" secondAttribute="bottom" id="d0c-7B-Kjr"/>
+                            <constraint firstItem="r0r-iN-dNB" firstAttribute="top" secondItem="8IF-de-RM4" secondAttribute="bottom" constant="20" id="fxb-bc-cul"/>
                             <constraint firstItem="aEj-Zx-29s" firstAttribute="leading" secondItem="V3c-ma-sc9" secondAttribute="leading" constant="10" id="jyY-1V-SLv"/>
                             <constraint firstItem="G48-Q9-i4G" firstAttribute="leading" secondItem="xxa-2h-7Xj" secondAttribute="leading" id="mHt-jV-H1Y"/>
                             <constraint firstItem="x7D-6Y-b7H" firstAttribute="leading" secondItem="V3c-ma-sc9" secondAttribute="leading" constant="100" id="ppt-7d-8CU"/>
@@ -170,6 +183,7 @@
                         <outlet property="label02" destination="ond-GG-nL4" id="Ybl-wC-6eZ"/>
                         <outlet property="noteButton" destination="x7D-6Y-b7H" id="YUl-fP-PE9"/>
                         <outlet property="titleTF" destination="E8o-k0-5TI" id="P1s-n4-GTX"/>
+                        <outlet property="updateButton" destination="r0r-iN-dNB" id="7B0-qo-9vg"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="VCSegue" id="hdg-Vv-4YW"/>
                     </connections>
                 </viewController>

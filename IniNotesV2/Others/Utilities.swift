@@ -11,4 +11,6 @@ import Foundation
 struct Utilities {
     let Notenib = "NoteTBCell"
     let NoteCell = "noteCell"
+    
+    
 }

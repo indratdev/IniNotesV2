@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 protocol NotesVCDelegate {
     func reloadData()
 }
+
 
 class NotesVC: UIViewController {
     @IBOutlet weak var titleTF: UITextField!
@@ -18,16 +20,57 @@ class NotesVC: UIViewController {
     @IBOutlet weak var noteButton: UIButton!
     @IBOutlet weak var label01: UILabel!
     @IBOutlet weak var label02: UILabel!
+    @IBOutlet weak var updateButton: UIButton!
     
     let context = OperationNote().context
+    let op = OperationNote()
     var validate = Validation()
+    //    var objectID: String?
+    var items: [Notes]?
+    var selectedItem: [String:Any] = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         customUI()
-        
+        isEditedNote(data: selectedItem)
     }
+    
+    func isEditedNote(data: [String:Any]){
+        if data.isEmpty {
+            print("add new")
+            updateButton.isHidden = true
+            
+        }else{
+            noteButton.isHidden = true
+            
+            titleTF.text = data["title"] as? String
+            descriptionTV.text = data["descriptionNote"] as? String
+        }
+    }
+    
+    
+    //    func loadDataToTF(data: String?){
+    //        //balikin objectid to
+    //        if let objectIDURL = URL(string: data!) {
+    //            let coordinator: NSPersistentStoreCoordinator = op.context.persistentStoreCoordinator!
+    //            let managedObjectID = coordinator.managedObjectID(forURIRepresentation: objectIDURL)!
+    //
+    //            //load data
+    //
+    //            do {
+    //
+    //                let data = try op.context.existingObject(with: managedObjectID)
+    //                print(data.entity.properties)
+    //
+    //            }catch{
+    //                print("Error Load Data from edit")
+    //            }
+    //
+    //
+    //        }
+    //    }
     
     private func customUI(){
         descriptionTV.layer.borderWidth = 1
@@ -48,12 +91,12 @@ class NotesVC: UIViewController {
             print("kosong")
             let alert = myAlert(title: "Error", message: "TextField Cannot Empty OR Text Too long")
             self.present(alert, animated: true)
-//            print("incorect title OR Description")
+            //            print("incorect title OR Description")
             return
             
         }else{
             print("isi")
-//
+            //
             saveData()
             
         }
@@ -81,6 +124,22 @@ class NotesVC: UIViewController {
     @IBAction func buttonProssed(_ sender: UIButton) {
         checkData()
     }
+    
+    @IBAction func updateButtonPressed(_ sender: UIButton) {
+        if let title = titleTF.text, let des = descriptionTV.text {
+            let objectID = selectedItem["id"] as? NSManagedObjectID
+            do {
+                var note = try op.context.existingObject(with: objectID!)
+                
+                
+                
+            }catch{
+                print("Errr")
+            }
+        }
+    }
+    
+    
     
     func saveData(){
         if let title = titleTF.text, let descriptionM = descriptionTV.text {

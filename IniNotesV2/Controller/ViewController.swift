@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     let util = Utilities()
     let op = OperationNote()
     var items: [Notes]?
+    var objectID: String?
+    var selectedItem: [String:Any] = [:]
     
     
     
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     private func loadData(){
         self.items = op.loadData()
         print("========= load data============")
+//        print(items)
         
         DispatchQueue.main.async {
             self.myTable.reloadData()
@@ -45,10 +48,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addNewButton(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "NoteSegue", sender: nil)
+        self.selectedItem = [:]
+        performSegue(withIdentifier: "NoteSegue", sender: sender)
     }
-    
-    
 }
 
 
@@ -73,9 +75,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 90
     }
     
+    
+    // MARK: SELECTED ITEM TABLEVIEW
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = self.items![indexPath.row]
-        print(data)
+        self.selectedItem["title"] = data.title
+        self.selectedItem["descriptionNote"] = data.descriptionNote
+        self.selectedItem["id"] = data.objectID
+        
+//        self.objectID = data.objectID.uriRepresentation().absoluteString
+        
+        performSegue(withIdentifier: "NoteSegue", sender: indexPath)
     }
     
     // MARK: SWIPE TO DELETE
@@ -105,8 +115,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "NoteSegue"){
-            
+            let controller = segue.destination as? NotesVC
+            controller?.selectedItem = self.selectedItem
         }
+        
+       
     }
 }
 
